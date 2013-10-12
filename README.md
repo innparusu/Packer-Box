@@ -1,0 +1,1 @@
+packerをつかってVirtualBoxのBoxを作成した時のjson,KickStart,script
