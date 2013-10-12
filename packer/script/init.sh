@@ -1,5 +1,5 @@
 #!/bin/sh
-
+yum -y install gcc dkms make kernel-devel wget clang zsh
 date > /etc/vagrant_box_build_time
 mkdir -pm 700 /home/vagrant/.ssh
 wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' -O /home/vagrant/.ssh/authorized_keys
@@ -11,6 +11,3 @@ cd /tmp
 mount -o loop /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
 sh /mnt/VBoxLinuxAdditions.run
 umount /mnt
-rm -rf /home/vagrant/VBoxGuestAdditions_*.iso
-
-rm -rf VBoxGuestAdditions_*.iso
